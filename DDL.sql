@@ -44,3 +44,35 @@ create table example_table (
 CREATE USER 'developer'@'127.0.0.1' identified by 'P!ssw0rd';
 create user 'developer'@'192.168.1.101' identified by 'P!ssw0rd';
 create user 'developer'@'%' identified by 'P!ssw0rd';
+
+-- DROP : 데이터 구조(스키마)를 삭제하는 명령어
+-- DROP 스키마명
+
+-- 사용자 삭제
+drop user 'developer'@'%';
+
+-- 테이블 삭제
+-- 만약 해당 테이블을 참조하고 있는 다른 테이블이 존재하면 테이블 삭제가 불가능
+drop table example_table;
+
+-- 데이터베이스 삭제
+drop database practice_sql;
+
+-- ALTER : 구조를 변경하는 명령어
+
+-- 테이블의 컬럼 추가
+alter table example_table add example_column3 varchar(10);
+
+-- 테이블 컬럼 삭제
+alter table example_table drop column example_column3;
+
+-- 테이블 컬럼 타입 수정
+alter table example_table modify column example_column2 text;
+
+-- 테이블 컬럼 전체 수정
+alter table example_table change example_column1 column1 varchar(20);
+
+-- 데이터베이스 문자셋 변경
+alter database practice_sql default character set utf8;
+
+-- 유저 비밀번호 변경
