@@ -45,6 +45,3 @@ select left(사원이름, 2), right(사원이름, 1) from employee_view;
 select replace(사원이름, '길동', '순자') from employee_view;
 
 
-
-
-
