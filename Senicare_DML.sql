@@ -133,18 +133,18 @@ update goods set count = count - 2 where goods_number = 1;
 -- 고객 수정
 -- 최종 사용자 (고객사진, 고객이름, 생년월일, 담당자, 주소)
 -- 고객 테이블에서 특정 고객에 대한 레코드 (고객 사진, 고객 이름, 생년월일, 담당자, 주소)를 수정
--- 추가 필요 데이터 : 고객 번호(화면에서)
+-- 추가 필요 데이터 : 고객 번호 (화면에서)
 
 -- 수정을 하려고 하는 레코드가 존재하는지 확인
 select * from customer where customer_number = 1;
 -- 레코드 수정시 담당자 관계 확인
-select * from nurse where id = 1;
+select * from nurse where id = 'qwer1234';
 
 update customer set 
 	profile_image = 'http://~~~',
     name = '고길동',
     birth = '590830',
-    charger = 1,
+    charger = 'qwer1234',
     address = '부산광역시 부산진구...'
 where customer_number = 1;
 
