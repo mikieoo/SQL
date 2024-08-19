@@ -44,4 +44,14 @@ select left(사원이름, 2), right(사원이름, 1) from employee_view;
 -- REPLACE(기존문자열, 찾을문자열, 바꿀문자열) : 특정 문자열을 지정한 문자열로 변경하는 함수
 select replace(사원이름, '길동', '순자') from employee_view;
 
+use toy_project;
 
+show tables;
+
+select * from users;
+
+show columns from users;
+
+
+
+alter table board drop column file_path;
